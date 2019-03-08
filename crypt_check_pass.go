@@ -41,7 +41,7 @@ func createPass(p string, c int) {
 
 	encPass, err := bcrypt.GenerateFromPassword([]byte(p), c)
 	if err != nil {
-		fmt.Printf("Error creyting the password Error: %s", err)
+		fmt.Printf("Error creating the password Error: %s", err)
 		os.Exit(2)
 	}
 	fmt.Println(string(encPass))
